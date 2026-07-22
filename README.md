@@ -39,17 +39,17 @@ SourceLoom is being built around a stricter question:
 
 ## The proposed research loop
 
-```mermaid
-flowchart LR
-    Q[Question] --> P[Decompose]
-    P --> R[Route queries]
-    R --> S[Search providers]
-    S --> N[Normalize and deduplicate]
-    N --> E[Build evidence graph]
-    E --> G{Evidence gaps?}
-    G -->|Yes, within budget| P
-    G -->|No| O[Traceable report]
-    G -->|Budget or timeout reached| U[Report unresolved gaps]
+```text
+Question
+   ↓
+Decompose → Route queries → Search providers
+   ↑                              ↓
+   └── Target unresolved gaps ← Evidence graph
+                                  ↓
+                     ┌────────────┴────────────┐
+                     ↓                         ↓
+              Traceable report       Unresolved-gap report
+              (coverage reached)     (hard limit reached)
 ```
 
 Search providers are inputs—not the product. The core product is the loop that plans, routes, evaluates evidence and decides whether another search wave is justified.
