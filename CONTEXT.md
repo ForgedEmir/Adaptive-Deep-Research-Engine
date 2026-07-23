@@ -34,13 +34,17 @@ The trace from a Document back to the origin of the information it contains. Sou
 
 A candidate reference returned by a Search Provider. Its title, URL or excerpt helps discover a Document but does not itself constitute Evidence.
 
+## Snippet
+
+A short excerpt returned inside a Search Result. It retains its discovery provenance, including provider, query, result rank and discovered URL, but cannot be linked directly to a Claim as Evidence.
+
 ## Document
 
-A retrievable unit of content produced by a Source, such as a web page, API response, PDF or repository file.
+A retrieved unit of content produced by a Source, such as a web page, API response, PDF or repository file. It records the canonical URL and the retrieved content separately from discovery metadata.
 
 ## Evidence
 
-A specific passage or structured record from a Document that is relevant to a Claim. A citation to a Document is not automatically Evidence.
+A specific passage or structured record from a Document that is relevant to a Claim. Textual Evidence records the exact character range it quotes from the Document. A citation to a Document is not automatically Evidence.
 
 ## Evidence Link
 
