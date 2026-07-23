@@ -6,13 +6,33 @@ This file defines the project’s domain language. It deliberately excludes impl
 
 The user’s original information need. A Research Question may require several Claims to answer responsibly.
 
+## Research Contract
+
+The explicit scope and limits of a Research Run. It records the question’s temporal, jurisdictional and definitional boundaries together with the evidence expectations and hard budgets that govern the run.
+
 ## Claim
 
 A concrete proposition that can be supported, contradicted or left unresolved. A Claim is narrower than a Research Question.
 
+## Claim Type
+
+The category that determines how a Claim must be scoped and what kind of Evidence can responsibly support it. Initial examples include current policy, legal, quantitative, scientific, historical and technical capability Claims.
+
+## Evidence Standard
+
+The explicit requirements that Evidence must meet for a Claim. It can constrain source type, directness, freshness, scope and independence without reducing confidence to one opaque score.
+
 ## Source
 
 The origin that publishes information, such as an official organisation, repository, paper or news outlet. Several Documents can belong to one Source.
+
+## Source Lineage
+
+The trace from a Document back to the origin of the information it contains. Source Lineage distinguishes independent Evidence from republication, syndication and citation of the same origin.
+
+## Search Result
+
+A candidate reference returned by a Search Provider. Its title, URL or excerpt helps discover a Document but does not itself constitute Evidence.
 
 ## Document
 
@@ -53,6 +73,10 @@ The complete trace from one Research Question to a Report, including Queries, Do
 ## Stopping Policy
 
 The explicit rules that end a Research Run because evidence requirements were met or a hard limit was reached.
+
+## Stopping Reason
+
+The explicit, serialisable outcome that explains why a Research Run ended. Reaching a budget or timeout never upgrades an unresolved Claim into a conclusion.
 
 ## Report
 
