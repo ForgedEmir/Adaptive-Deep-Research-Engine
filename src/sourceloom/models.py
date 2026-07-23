@@ -85,18 +85,56 @@ class Claim:
 
 
 @dataclass(frozen=True, slots=True)
-class Evidence:
+class SearchSnippet:
     id: str
-    quote: str
-    source_title: str
-    source_url: str
+    text: str
+    provider: str
+    query: str
+    rank: int
+    discovered_url: str
+
+    def to_dict(self) -> dict[str, str | int]:
+        return {
+            "id": self.id,
+            "text": self.text,
+            "provider": self.provider,
+            "query": self.query,
+            "rank": self.rank,
+            "discovered_url": self.discovered_url,
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class Document:
+    id: str
+    title: str
+    canonical_url: str
+    content: str
 
     def to_dict(self) -> dict[str, str]:
         return {
             "id": self.id,
+            "title": self.title,
+            "canonical_url": self.canonical_url,
+            "content": self.content,
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class Evidence:
+    id: str
+    document_id: str
+    quote: str
+    start_char: int
+    end_char: int
+
+    def to_dict(self) -> dict[str, str | int]:
+        return {
+            "id": self.id,
+            "document_id": self.document_id,
             "quote": self.quote,
-            "source_title": self.source_title,
-            "source_url": self.source_url,
+            "start_char": self.start_char,
+            "end_char": self.end_char,
         }
 
 
@@ -129,6 +167,8 @@ class ResearchTrace:
     research_question: str
     contract: ResearchContract
     claims: tuple[Claim, ...]
+    snippets: tuple[SearchSnippet, ...]
+    documents: tuple[Document, ...]
     evidence: tuple[Evidence, ...]
     evidence_links: tuple[EvidenceLink, ...]
     evidence_gaps: tuple[EvidenceGap, ...]
@@ -139,6 +179,8 @@ class ResearchTrace:
             "research_question": self.research_question,
             "contract": self.contract.to_dict(),
             "claims": [claim.to_dict() for claim in self.claims],
+            "snippets": [snippet.to_dict() for snippet in self.snippets],
+            "documents": [document.to_dict() for document in self.documents],
             "evidence": [item.to_dict() for item in self.evidence],
             "evidence_links": [link.to_dict() for link in self.evidence_links],
             "evidence_gaps": [gap.to_dict() for gap in self.evidence_gaps],

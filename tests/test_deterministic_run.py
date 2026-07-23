@@ -35,12 +35,24 @@ def test_minimal_fixture_produces_a_traceable_research_run() -> None:
                 "status": "open",
             },
         ],
+        "snippets": [],
+        "documents": [
+            {
+                "id": "document-official-billing",
+                "title": "Official billing documentation",
+                "canonical_url": "https://example.test/official-billing",
+                "content": (
+                    "API usage is billed and managed separately from the subscription."
+                ),
+            }
+        ],
         "evidence": [
             {
                 "id": "evidence-separate-billing",
+                "document_id": "document-official-billing",
                 "quote": "API usage is billed and managed separately from the subscription.",
-                "source_title": "Official billing documentation",
-                "source_url": "https://example.test/official-billing",
+                "start_char": 0,
+                "end_char": 65,
             }
         ],
         "evidence_links": [

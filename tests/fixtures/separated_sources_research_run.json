@@ -1,31 +1,35 @@
 {
-  "question": "Does a software subscription include API usage?",
+  "question": "Does the subscription include API usage?",
   "contract": {
-    "max_waves": 2,
-    "max_queries": 5,
+    "max_waves": 1,
+    "max_queries": 1,
     "max_documents": 1,
     "max_cost_eur": 1,
-    "max_duration_seconds": 60
+    "max_duration_seconds": 30
   },
   "claims": [
     {
       "id": "claim-subscription-billing",
-      "statement": "The software subscription and API usage are billed separately.",
-      "evidence_requirement": "Owner documentation that explicitly distinguishes subscription billing from API billing."
-    },
-    {
-      "id": "claim-current-api-price",
-      "statement": "The current API price is documented by the provider.",
-      "evidence_requirement": "A current official pricing page that states the API price."
+      "statement": "The subscription and API usage are billed separately.",
+      "evidence_requirement": "An exact passage from the provider documentation."
     }
   ],
-  "snippets": [],
+  "snippets": [
+    {
+      "id": "snippet-overclaim",
+      "text": "The subscription includes unlimited API usage.",
+      "provider": "search-fixture",
+      "query": "subscription API usage billing",
+      "rank": 1,
+      "discovered_url": "https://example.test/official-billing?utm_source=search"
+    }
+  ],
   "documents": [
     {
       "id": "document-official-billing",
       "title": "Official billing documentation",
       "canonical_url": "https://example.test/official-billing",
-      "content": "API usage is billed and managed separately from the subscription."
+      "content": "API usage is billed and managed separately from the subscription. Current prices are listed elsewhere."
     }
   ],
   "evidence": [
