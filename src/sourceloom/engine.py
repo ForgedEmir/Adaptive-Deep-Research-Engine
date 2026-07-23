@@ -10,12 +10,14 @@ from .models import (
     EvidenceGap,
     EvidenceLink,
     EvidenceStance,
+    ResearchContract,
     ResearchTrace,
     StoppingReason,
 )
 
 
 def run_fixture(fixture: Mapping[str, Any]) -> ResearchTrace:
+    contract = ResearchContract.from_mapping(fixture.get("contract"))
     evidence = tuple(
         Evidence(
             id=item["id"],
@@ -60,8 +62,7 @@ def run_fixture(fixture: Mapping[str, Any]) -> ResearchTrace:
         if item["id"] not in supported_claim_ids
     )
 
-    max_documents = fixture["contract"]["max_documents"]
-    if len(evidence) >= max_documents:
+    if len(evidence) >= contract.max_documents:
         stopping_reason = StoppingReason.DOCUMENT_LIMIT_REACHED
     elif evidence_gaps:
         stopping_reason = StoppingReason.FIXTURE_EXHAUSTED
@@ -70,6 +71,7 @@ def run_fixture(fixture: Mapping[str, Any]) -> ResearchTrace:
 
     return ResearchTrace(
         research_question=fixture["question"],
+        contract=contract,
         claims=claims,
         evidence=evidence,
         evidence_links=links,

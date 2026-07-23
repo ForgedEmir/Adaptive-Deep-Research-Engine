@@ -1,7 +1,11 @@
 {
   "question": "Does a software subscription include API usage?",
   "contract": {
-    "max_documents": 1
+    "max_waves": 2,
+    "max_queries": 5,
+    "max_documents": 1,
+    "max_cost_eur": 1,
+    "max_duration_seconds": 60
   },
   "claims": [
     {

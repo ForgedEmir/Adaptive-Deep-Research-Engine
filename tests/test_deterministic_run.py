@@ -16,6 +16,13 @@ def test_minimal_fixture_produces_a_traceable_research_run() -> None:
 
     assert trace.to_dict() == {
         "research_question": "Does a software subscription include API usage?",
+        "contract": {
+            "max_waves": 2,
+            "max_queries": 5,
+            "max_documents": 1,
+            "max_cost_eur": 1.0,
+            "max_duration_seconds": 60,
+        },
         "claims": [
             {
                 "id": "claim-subscription-billing",
