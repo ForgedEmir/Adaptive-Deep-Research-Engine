@@ -1,5 +1,5 @@
 from .engine import run_fixture
-from .models import ResearchTrace
+from .models import ResearchContract, ResearchTrace
 
-__all__ = ["ResearchTrace", "run_fixture"]
+__all__ = ["ResearchContract", "ResearchTrace", "run_fixture"]
 __version__ = "0.0.0"
