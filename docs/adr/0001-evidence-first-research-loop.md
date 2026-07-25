@@ -7,7 +7,7 @@
 
 A multi-provider research engine can be organised around provider results, generated prose or evidence requirements. Provider-first aggregation is easy to implement but makes it difficult to explain why more searching is needed. Prose-first synthesis can hide unsupported claims behind fluent output.
 
-Changing the central research state after provider adapters and evaluation datasets exist would be expensive. Future contributors also need to understand why SourceLoom does not simply merge result lists.
+Changing the central research state after provider adapters and evaluation datasets exist would be expensive. Future contributors also need to understand why Adaptive Deep Research Engine does not simply merge result lists.
 
 ## Decision
 

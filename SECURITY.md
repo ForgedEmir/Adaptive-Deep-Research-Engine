@@ -1,6 +1,6 @@
 # Security policy
 
-SourceLoom will interact with external search providers and untrusted web content. Security reports should not include live credentials or private research data.
+Adaptive Deep Research Engine will interact with external search providers and untrusted web content. Security reports should not include live credentials or private research data.
 
 Until a dedicated disclosure channel is published, report vulnerabilities privately through GitHub’s private vulnerability reporting feature when available.
 

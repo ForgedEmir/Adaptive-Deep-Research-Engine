@@ -1,6 +1,6 @@
 # Architecture direction
 
-SourceLoom is an evidence-first deep-research engine. This document records the intended boundaries before implementation begins.
+Adaptive Deep Research Engine is an evidence-first research engine. This document records the intended boundaries before implementation begins.
 
 ## Core pipeline
 
