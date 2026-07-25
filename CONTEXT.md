@@ -1,4 +1,4 @@
-# SourceLoom domain glossary
+# Adaptive Deep Research Engine domain glossary
 
 This file defines the project’s domain language. It deliberately excludes implementation details.
 

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from sourceloom import run_fixture
+from adaptive_deep_research_engine import run_fixture
 
 
 FIXTURE_PATH = Path(__file__).parent / "fixtures" / "minimal_research_run.json"
