@@ -1,6 +1,6 @@
-# Roadmap initiale de SourceLoom
+# Roadmap initiale d’Adaptive Deep Research Engine
 
-Cette roadmap découpe la première version de SourceLoom en étapes testables. Une étape ne doit pas commencer tant que ses dépendances ne sont pas terminées et vérifiées.
+Cette roadmap découpe la première version d’Adaptive Deep Research Engine en étapes testables. Une étape ne doit pas commencer tant que ses dépendances ne sont pas terminées et vérifiées.
 
 ## Règle de progression
 
@@ -25,14 +25,14 @@ Exécuter une recherche complète à partir de fixtures locales, sans réseau et
 
 | Issue | Résultat testable |
 |---|---|
-| [#2](https://github.com/ForgedEmir/SourceLoom/issues/2) | Une fixture produit une trace JSON déterministe avec un claim supporté, une preuve, une lacune et une raison d'arrêt. |
-| [#3](https://github.com/ForgedEmir/SourceLoom/issues/3) | Les limites invalides sont rejetées et une limite atteinte arrête réellement le run. |
-| [#4](https://github.com/ForgedEmir/SourceLoom/issues/4) | Un snippet ne peut pas devenir directement une preuve. |
-| [#5](https://github.com/ForgedEmir/SourceLoom/issues/5) | Les claims portent un type, un périmètre et un standard de preuve. |
-| [#6](https://github.com/ForgedEmir/SourceLoom/issues/6) | Les contradictions sont classées selon leur contexte. |
-| [#7](https://github.com/ForgedEmir/SourceLoom/issues/7) | Les duplications et reprises d'une même origine ne comptent pas comme confirmations indépendantes. |
-| [#8](https://github.com/ForgedEmir/SourceLoom/issues/8) | Un rapport Markdown est reconstruit uniquement depuis la trace. |
-| [#9](https://github.com/ForgedEmir/SourceLoom/issues/9) | Le run déterministe peut être lancé depuis le terminal. |
+| [#2](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/2) | Une fixture produit une trace JSON déterministe avec un claim supporté, une preuve, une lacune et une raison d'arrêt. |
+| [#3](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/3) | Les limites invalides sont rejetées et une limite atteinte arrête réellement le run. |
+| [#4](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/4) | Un snippet ne peut pas devenir directement une preuve. |
+| [#5](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/5) | Les claims portent un type, un périmètre et un standard de preuve. |
+| [#6](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/6) | Les contradictions sont classées selon leur contexte. |
+| [#7](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/7) | Les duplications et reprises d'une même origine ne comptent pas comme confirmations indépendantes. |
+| [#8](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/8) | Un rapport Markdown est reconstruit uniquement depuis la trace. |
+| [#9](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/9) | Le run déterministe peut être lancé depuis le terminal. |
 
 ### Ce que je dois pouvoir faire à la fin
 
@@ -59,10 +59,10 @@ Découvrir et récupérer des documents à travers des contrats neutres, sans la
 
 | Issue | Résultat testable |
 |---|---|
-| [#10](https://github.com/ForgedEmir/SourceLoom/issues/10) | Un faux fournisseur répond à un contrat de recherche neutre. |
-| [#11](https://github.com/ForgedEmir/SourceLoom/issues/11) | Une réponse Tavily enregistrée est normalisée sans appel réel. |
-| [#12](https://github.com/ForgedEmir/SourceLoom/issues/12) | Une réponse Exa enregistrée est normalisée et le choix du fournisseur est tracé. |
-| [#13](https://github.com/ForgedEmir/SourceLoom/issues/13) | Une référence découverte devient un document complet avec URL canonique, date et empreinte. |
+| [#10](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/10) | Un faux fournisseur répond à un contrat de recherche neutre. |
+| [#11](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/11) | Une réponse Tavily enregistrée est normalisée sans appel réel. |
+| [#12](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/12) | Une réponse Exa enregistrée est normalisée et le choix du fournisseur est tracé. |
+| [#13](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/13) | Une référence découverte devient un document complet avec URL canonique, date et empreinte. |
 
 ### Ce que je dois pouvoir faire à la fin
 
@@ -88,10 +88,10 @@ Choisir chaque nouvelle recherche à partir des lacunes réelles de la recherche
 
 | Issue | Résultat testable |
 |---|---|
-| [#14](https://github.com/ForgedEmir/SourceLoom/issues/14) | Une vague sans nouveauté utile déclenche une saturation observable. |
-| [#15](https://github.com/ForgedEmir/SourceLoom/issues/15) | La prochaine requête cible le gap critique le mieux justifié. |
-| [#16](https://github.com/ForgedEmir/SourceLoom/issues/16) | Les sorties du modèle sont structurées, validées et bornées en retries. |
-| [#17](https://github.com/ForgedEmir/SourceLoom/issues/17) | Plusieurs vagues enregistrées font évoluer le graphe jusqu'à une raison d'arrêt explicite. |
+| [#14](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/14) | Une vague sans nouveauté utile déclenche une saturation observable. |
+| [#15](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/15) | La prochaine requête cible le gap critique le mieux justifié. |
+| [#16](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/16) | Les sorties du modèle sont structurées, validées et bornées en retries. |
+| [#17](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/17) | Plusieurs vagues enregistrées font évoluer le graphe jusqu'à une raison d'arrêt explicite. |
 
 ### Ce que je dois pouvoir faire à la fin
 
@@ -117,9 +117,9 @@ Vérifier sur un petit pilote réel que la boucle evidence-first apporte une val
 
 | Issue | Résultat testable |
 |---|---|
-| [#18](https://github.com/ForgedEmir/SourceLoom/issues/18) | Un pilote live borné utilise Tavily et Exa sans dépasser ses limites. |
-| [#19](https://github.com/ForgedEmir/SourceLoom/issues/19) | SourceLoom est comparé à Tavily seul, Exa seul et une fusion simple. |
-| [#20](https://github.com/ForgedEmir/SourceLoom/issues/20) | La première version démontrable est vérifiée depuis une installation propre. |
+| [#18](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/18) | Un pilote live borné utilise Tavily et Exa sans dépasser ses limites. |
+| [#19](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/19) | Adaptive Deep Research Engine est comparé à Tavily seul, Exa seul et une fusion simple. |
+| [#20](https://github.com/ForgedEmir/Adaptive-Deep-Research-Engine/issues/20) | La première version démontrable est vérifiée depuis une installation propre. |
 
 ### Ce que je dois pouvoir faire à la fin
 

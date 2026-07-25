@@ -1,6 +1,6 @@
-# Contributing to SourceLoom
+# Contributing to Adaptive Deep Research Engine
 
-SourceLoom is in its foundation phase. Contributions should keep claims, evidence and evaluation separate from presentation.
+Adaptive Deep Research Engine is in its foundation phase. Contributions should keep claims, evidence and evaluation separate from presentation.
 
 ## Branch workflow
 

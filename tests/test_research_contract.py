@@ -2,7 +2,7 @@ from copy import deepcopy
 
 import pytest
 
-from sourceloom import run_fixture
+from adaptive_deep_research_engine import run_fixture
 from test_deterministic_run import load_fixture
 
 

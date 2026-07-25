@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from sourceloom import run_fixture
+from adaptive_deep_research_engine import run_fixture
 
 
 FIXTURE_PATH = Path(__file__).parent / "fixtures" / "separated_sources_research_run.json"

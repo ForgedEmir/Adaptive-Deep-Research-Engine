@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/logo.png" width="132" alt="SourceLoom logo">
+  <img src="assets/logo.png" width="132" alt="Adaptive Deep Research Engine logo">
 </p>
 
-<h1 align="center">SourceLoom</h1>
+<h1 align="center">Adaptive Deep Research Engine</h1>
 
 <p align="center">
   <strong>Adaptive, evidence-first deep research across multiple search providers.</strong>
@@ -18,10 +18,10 @@
   <a href="CONTEXT.md">Domain glossary</a>
 </p>
 
-![SourceLoom: sources woven into a structured evidence graph](assets/hero.png)
+![Adaptive Deep Research Engine: sources connected into a structured evidence graph](assets/hero.png)
 
 > [!IMPORTANT]
-> **Current status: foundation and design.** SourceLoom does not yet provide a working research engine. Provider integrations, the adaptive loop and benchmarks are the next implementation milestones. The roadmap below distinguishes shipped work from planned work.
+> **Current status: foundation and design.** Adaptive Deep Research Engine does not yet provide a working research engine. Provider integrations, the adaptive loop and benchmarks are the next implementation milestones. The roadmap below distinguishes shipped work from planned work.
 
 ## The problem
 
@@ -33,7 +33,7 @@ Tavily results + Exa results → LLM summary
 
 That can produce a fluent answer without showing whether important claims are supported, whether sources are independent, or why the search stopped.
 
-SourceLoom is being built around a stricter question:
+Adaptive Deep Research Engine is being built around a stricter question:
 
 > **What evidence is still missing, and which search action is most likely to find it?**
 
@@ -97,7 +97,7 @@ The engine will remain provider-independent. Provider-specific responses will be
 
 ## Evaluation plan
 
-SourceLoom will not be labelled “better” because its reports look convincing. The adaptive strategy will be compared against explicit baselines.
+Adaptive Deep Research Engine will not be labelled “better” because its reports look convincing. The adaptive strategy will be compared against explicit baselines.
 
 | Dimension | What will be measured |
 |---|---|
@@ -115,7 +115,7 @@ Initial comparison:
 Tavily only
 Exa only
 Naive Tavily + Exa merge
-SourceLoom adaptive Evidence-Gap Search
+Adaptive Deep Research Engine with Evidence-Gap Search
 ```
 
 A small validation set will be used before any larger benchmark. Pilot thresholds and budgets will be treated as tunable hypotheses.
@@ -138,7 +138,7 @@ A small validation set will be used before any larger benchmark. Pilot threshold
 The command below documents the target developer experience; it is **not implemented yet**.
 
 ```bash
-sourceloom research \
+adaptive-deep-research-engine research \
   "Can a ChatGPT subscription fund third-party API usage?" \
   --providers tavily,exa \
   --max-search-waves 3 \
