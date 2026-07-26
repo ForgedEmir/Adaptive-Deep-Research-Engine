@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-deep-research-engine"
+description = "Adaptive, evidence-first deep research across multiple search providers."
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.dynamic]
+version = {attr = "adaptive_deep_research_engine.__version__"}
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

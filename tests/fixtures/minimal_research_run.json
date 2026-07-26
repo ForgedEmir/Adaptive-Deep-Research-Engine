@@ -1,0 +1,47 @@
+{
+  "question": "Does a software subscription include API usage?",
+  "contract": {
+    "max_waves": 2,
+    "max_queries": 5,
+    "max_documents": 1,
+    "max_cost_eur": 1,
+    "max_duration_seconds": 60
+  },
+  "claims": [
+    {
+      "id": "claim-subscription-billing",
+      "statement": "The software subscription and API usage are billed separately.",
+      "evidence_requirement": "Owner documentation that explicitly distinguishes subscription billing from API billing."
+    },
+    {
+      "id": "claim-current-api-price",
+      "statement": "The current API price is documented by the provider.",
+      "evidence_requirement": "A current official pricing page that states the API price."
+    }
+  ],
+  "snippets": [],
+  "documents": [
+    {
+      "id": "document-official-billing",
+      "title": "Official billing documentation",
+      "canonical_url": "https://example.test/official-billing",
+      "content": "API usage is billed and managed separately from the subscription."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-separate-billing",
+      "document_id": "document-official-billing",
+      "quote": "API usage is billed and managed separately from the subscription.",
+      "start_char": 0,
+      "end_char": 65
+    }
+  ],
+  "links": [
+    {
+      "claim_id": "claim-subscription-billing",
+      "evidence_id": "evidence-separate-billing",
+      "stance": "supports"
+    }
+  ]
+}

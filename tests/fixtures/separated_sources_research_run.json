@@ -1,0 +1,51 @@
+{
+  "question": "Does the subscription include API usage?",
+  "contract": {
+    "max_waves": 1,
+    "max_queries": 1,
+    "max_documents": 1,
+    "max_cost_eur": 1,
+    "max_duration_seconds": 30
+  },
+  "claims": [
+    {
+      "id": "claim-subscription-billing",
+      "statement": "The subscription and API usage are billed separately.",
+      "evidence_requirement": "An exact passage from the provider documentation."
+    }
+  ],
+  "snippets": [
+    {
+      "id": "snippet-overclaim",
+      "text": "The subscription includes unlimited API usage.",
+      "provider": "search-fixture",
+      "query": "subscription API usage billing",
+      "rank": 1,
+      "discovered_url": "https://example.test/official-billing?utm_source=search"
+    }
+  ],
+  "documents": [
+    {
+      "id": "document-official-billing",
+      "title": "Official billing documentation",
+      "canonical_url": "https://example.test/official-billing",
+      "content": "API usage is billed and managed separately from the subscription. Current prices are listed elsewhere."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-separate-billing",
+      "document_id": "document-official-billing",
+      "quote": "API usage is billed and managed separately from the subscription.",
+      "start_char": 0,
+      "end_char": 65
+    }
+  ],
+  "links": [
+    {
+      "claim_id": "claim-subscription-billing",
+      "evidence_id": "evidence-separate-billing",
+      "stance": "supports"
+    }
+  ]
+}
